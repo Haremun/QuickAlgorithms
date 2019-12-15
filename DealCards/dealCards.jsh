@@ -1,3 +1,5 @@
+int numberOfPlayers = Integer.valueOf(System.getProperty("players"));
+
 List<String> cards = new ArrayList<String>();
 
 String[] symbols = new String[] { "9", "10", "Jack", "Queen", "King", "Ace" };
@@ -12,7 +14,6 @@ for (int i = 0; i < colors.length; i++){
 Collections.shuffle(cards);
 
 int counter = 0;
-int numberOfPlayers = 7;
 List<ArrayList<String>> players = new ArrayList<>();
 
 for(int i = 0; i < numberOfPlayers; i++){
@@ -27,11 +28,13 @@ void dealCards(){
     counter = 0;
   }
 }
-
-dealCards();
-
 void showHand(List<String> hand){
   hand.forEach(System.out::println);
   System.out.println("");
 }
+
+dealCards();
+
 players.forEach(x -> showHand(x));
+/exit
+
