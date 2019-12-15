@@ -1,0 +1,2 @@
+To start deal cards script you need to use command: jshell dealCards.jsh -R-Dplayers=#NUMBER_OF_PLAYERS
+
